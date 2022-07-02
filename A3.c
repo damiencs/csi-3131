@@ -80,7 +80,7 @@ void* stu(void* arg){
             }else{
                 sem_post(&sem_ta);
                 sem_wait(&sem_student);
-                printf("TA has finished helping.\n");
+                printf("TA has finished helping student %d.\n", id);
                 
             }
 
