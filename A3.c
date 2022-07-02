@@ -33,11 +33,11 @@ int main(int ac, char *argv[]){
     pthread_attr_init(&attribute);
 
     pthread_create(&t_ta, NULL, ta, NULL); //threads  ta
-    students_thread = (pthread_t*) malloc(numStudent * sizeof(pthread_t));
+    t_student = (pthread_t*) malloc(numStudent * sizeof(pthread_t));
     student_id = (int*) malloc(numStudent * sizeof(int));
     for(int i = 0; i < numStudent; i++){
         student_id[i] = i;
-        pthread_create(&t_student[i], NULL, stu, &student_id[i])//threads student
+        pthread_create(&t_student[i], NULL, stu, &student_id[i]);//threads student
     }
 
     pthread_mutex_init(&chair_mutex, NULL);//mutex
