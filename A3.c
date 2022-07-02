@@ -18,6 +18,9 @@ pthread_t *t_student;
 pthread_t t_ta;
 pthread_mutex_t chair_mutex;
 
+void* stu( void *std );
+void* ta();
+
 int main(int ac, char *argv[]){
     int numStudent;
     printf("Enter number of students: ");
